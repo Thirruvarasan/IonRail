@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bb"
+    android:orientation="vertical"
+    tools:context="com.railway.ionrail2.UserGuide">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RAILWAY CROSSING SYSTEM"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:text="USER GUIDE"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/logonoback"
+        android:layout_marginTop="-30dp"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="                                      SAFETY GUIDELINES\n\n
+1.Always stay behind the yellow lines at train stations. Enter or exit a station platform at designated areas
+\n\n2.Train tracks, bridges and yards are private property. Never walk, bike, skateboard or run on or along the tracks; it’s illegal and dangerous
+\n\n3.Hold hands with smaller children while at stations and crossings.
+\n\n4.Remember to obey all warning signs and signals. Look, Listen, Live! Near Train Tracks... Stay Focused, Stay Alive.
+\n\n5.Remember that approaching trains are always closer and moving faster than they appear. Always yield the right-of-way to a train.
+\n\n6.Report suspicious packages, activities, and/or persons by calling 911."
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+</LinearLayout>

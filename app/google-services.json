@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "224463215660",
+    "project_id": "ionrail-2",
+    "storage_bucket": "ionrail-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224463215660:android:9c73996cea1bf0d06f4589",
+        "android_client_info": {
+          "package_name": "com.example.ionrail2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224463215660-jjtci1m3t7ntn1cs2278947l3qa06lo0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQWpA1eEoeGtxL6W7jSlYW-5W0BjjlUBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224463215660-jjtci1m3t7ntn1cs2278947l3qa06lo0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_EComplaintUser"
+            android:icon="@drawable/baseline_message_24"
+            android:title="E-Complaint" />
+        <item
+            android:id="@+id/nav_UserGuide"
+            android:icon="@drawable/guide"
+            android:title="Guide" />
+
+    </group>
+
+    <group>
+
+        <item android:title="Profile">
+
+            <menu>
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/baseline_home_24"
+                    android:title="Log Out" />
+
+            </menu>
+        </item>
+    </group>
+
+
+</menu>

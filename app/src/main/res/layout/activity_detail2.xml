@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Dandelion"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="DATE : "
+                android:textColor="@color/Deep_Blue"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/detailDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="Date"
+                android:textColor="@color/Deep_Blue"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="TIME : "
+                android:textColor="@color/Deep_Blue"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/detailTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="Time"
+                android:textColor="@color/Deep_Blue"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="INSTRUCTION :"
+                android:textColor="@color/Deep_Blue"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/detailInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="instruction"
+                android:textColor="@color/Deep_Blue"
+                android:textSize="16dp" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

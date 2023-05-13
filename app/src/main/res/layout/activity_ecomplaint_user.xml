@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bb"
+    tools:context="com.railway.ionrail2.EComplaintUser"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RAILWAY CROSSING SYSTEM"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="E - COMPLAINT"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/logonoback"
+        android:layout_marginTop="-30dp"/>
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:clickable="false"
+        android:text="NAME "
+        android:textSize="14dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginTop="40dp"/>
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="-40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/lblPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:clickable="false"
+        android:text="PHONE NUMBER "
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="-40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/lblComplaint2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="120dp"
+        android:clickable="false"
+        android:layout_marginTop="30dp"
+        android:text="COMPLAINT"
+        android:textStyle="bold"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/editTextComplaint"
+        android:layout_width="194dp"
+        android:layout_height="143dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="-40dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:lines="10"
+        android:textColor="@color/lavender"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="SEND"
+        android:textColor="@color/Deep_Blue"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/Dandelion" />
+
+</LinearLayout>
