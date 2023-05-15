@@ -22,7 +22,5 @@ public class DataClass2 {
     public String getDataInstruction() {
         return dataInstruction;
     }
-    public DataClass2(){
 
-    }
 }

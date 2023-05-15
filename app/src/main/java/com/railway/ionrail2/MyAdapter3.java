@@ -13,14 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ionrail2.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyAdapter3 extends RecyclerView.Adapter<MyViewHolder3> {
 
     private Context context3;
-    private List<DataClass3> dataList3;
+    private ArrayList<DataClass3> dataList3;
 
-    public MyAdapter3(Context context, List<DataClass3> dataList3) {
+    public MyAdapter3(Context context, ArrayList<DataClass3> dataList3) {
         this.context3 = context;
         this.dataList3 = dataList3;
     }
@@ -34,19 +35,21 @@ public class MyAdapter3 extends RecyclerView.Adapter<MyViewHolder3> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder3 holder, int position) {
-
-//        DataClass3 dataClass3 = dataList3.get(position);
-        holder.recServodoor1.setText(dataList3.get(position).getDataServodoor());
-        holder.recUsonic1.setText(dataList3.get(position).getDataUsonic());
-        holder.recTimestamp1.setText(dataList3.get(position).getDataTimeStamp());
+        DataClass3 dataClass3 = dataList3.get(position);
+        holder.recServodoor1.setText(dataClass3.getDataServodoor());
+        holder.recUsonic1.setText(dataClass3.getDataUsonic());
+        holder.recTimestamp1.setText(dataClass3.getDataTimeStamp());
+//        holder.recServodoor1.setText(dataList3.get(position).getDataServodoor());
+//        holder.recUsonic1.setText(dataList3.get(position).getDataUsonic());
+//        holder.recTimestamp1.setText(dataList3.get(position).getDataTimeStamp());
 
         holder.recCard3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context3, DetailActivity3.class);
                 intent.putExtra("servodoor", dataList3.get(holder.getAdapterPosition()).getDataServodoor());
-                intent.putExtra("timestamp", dataList3.get(holder.getAdapterPosition()).getDataTimeStamp());
                 intent.putExtra("usonic", dataList3.get(holder.getAdapterPosition()).getDataUsonic());
+                intent.putExtra("timestamp", dataList3.get(holder.getAdapterPosition()).getDataTimeStamp());
                 context3.startActivity(intent);
             }
         });
@@ -64,7 +67,7 @@ class MyViewHolder3 extends RecyclerView.ViewHolder {
         super(itemView);
 
         recCard3 = itemView.findViewById(R.id.recCard3);
-        recServodoor1 = itemView.findViewById(R.id.recServodoor);
+        recServodoor1 = itemView.findViewById(R.id.recAlert);
         recUsonic1 = itemView.findViewById(R.id.recUsonic);
         recTimestamp1 = itemView.findViewById(R.id.recTimeStamp);
     }

@@ -24,7 +24,7 @@ public class HomePageAdmin extends AppCompatActivity implements NavigationView.O
     NavigationView navigationView;
     Toolbar toolbar;
     ActionBar actionBar;
-    Button btnAlert, btnContactStaff, btnEcomplaint;
+    Button btnAlert, btnContactStaff, btnEcomplaint, btnAlert2;
 
 
    // @SuppressLint("MissingInflatedId")
@@ -39,7 +39,15 @@ public class HomePageAdmin extends AppCompatActivity implements NavigationView.O
         btnAlert = findViewById(R.id.btnAlert);
         btnContactStaff = findViewById(R.id.btnContactStaff);
         btnEcomplaint = findViewById(R.id.btnEcomplaintAdminn);
+        btnAlert2 = findViewById(R.id.btnAlert2);
 
+        btnAlert2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePageAdmin.this,Alert2.class);
+                startActivity(intent);
+            }
+        });
         btnAlert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

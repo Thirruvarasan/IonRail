@@ -17,35 +17,35 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AlertFromAdmin extends AppCompatActivity {
+public class Alert2 extends AppCompatActivity {
     RecyclerView recyclerView;
-    List<DataClass2> dataList2;
+    ArrayList<DataClass4> dataList4;
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alert_from_admin);
+        setContentView(R.layout.activity_alert2);
 
-        recyclerView = findViewById(R.id.recyclerView2);
+        recyclerView = findViewById(R.id.recyclerView4);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(AlertFromAdmin.this,1);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(Alert2.this,1);
         recyclerView.setLayoutManager(gridLayoutManager);
 
-        dataList2 = new ArrayList<>();
-        MyAdapter2 adapter = new MyAdapter2(AlertFromAdmin.this,dataList2);
+        dataList4 = new ArrayList<>();
+        MyAdapter4 adapter = new MyAdapter4(Alert2.this,dataList4);
         recyclerView.setAdapter(adapter);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Instruction");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Obstaclecheck");
 
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                dataList2.clear();
+                dataList4.clear();
                 for (DataSnapshot itemSnapshot : snapshot.getChildren()){
-                    DataClass2 dataClass = itemSnapshot.getValue(DataClass2.class);
-                    dataList2.add(dataClass);
+                    DataClass4 dataClass = itemSnapshot.getValue(DataClass4.class);
+                    dataList4.add(dataClass);
                 }
                 adapter.notifyDataSetChanged();
             }

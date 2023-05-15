@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/recCard3"
+    android:id="@+id/recCard4"
     android:layout_marginStart="12dp"
     android:layout_marginEnd="12dp"
     android:layout_marginHorizontal="10dp"
@@ -19,7 +19,7 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:id="@+id/recTimeStamp"
+            android:id="@+id/recTimeStamp2"
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:layout_marginLeft="30dp"
@@ -30,27 +30,27 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/recUsonic"
+            android:id="@+id/recFront"
             android:layout_width="200dp"
             android:layout_height="30dp"
             android:layout_marginStart="3dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_toEndOf="@id/recTimeStamp"
-            android:text="Usonic"
+            android:layout_toEndOf="@id/recTimeStamp2"
+            android:text="Front"
             android:textAlignment="center"
             android:textColor="@color/Deep_Blue"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/recAlert"
+            android:id="@+id/recRear"
             android:layout_width="300dp"
             android:layout_height="25dp"
-            android:layout_below="@id/recTimeStamp"
+            android:layout_below="@id/recTimeStamp2"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="0dp"
             android:maxLines="1"
-            android:text="Alert"
+            android:text="Rear"
             android:textColor="@color/Deep_Blue"
             android:textSize="18sp" />
 

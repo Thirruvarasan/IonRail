@@ -15,13 +15,13 @@ public class DetailActivity3 extends AppCompatActivity {
 
             timestamp = findViewById(R.id.detailTimestamp);
             usonic = findViewById(R.id.detailUsonic);
-            servodoor = findViewById(R.id.detailServodoor);
+            servodoor = findViewById(R.id.detailAlert);
 
             Bundle bundle = getIntent().getExtras();
             if (bundle != null){
-                timestamp.setText(bundle.getString("timestamp"));
-                usonic.setText(bundle.getString("usonic"));
-                servodoor.setText(bundle.getString("servodoor"));
+                timestamp.setText(bundle.getString("dataDate"));
+                usonic.setText(bundle.getString("dataInstruction"));
+                servodoor.setText(bundle.getString("dataTime"));
             }
         }
     }

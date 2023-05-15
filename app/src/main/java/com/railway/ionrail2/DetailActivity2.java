@@ -22,9 +22,9 @@ public class DetailActivity2 extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
-            date.setText(bundle.getString("Date"));
-            time.setText(bundle.getString("Time"));
-            instruction.setText(bundle.getString("Instruction"));
+            date.setText(bundle.getString("dataDate"));
+            time.setText(bundle.getString("dataTime"));
+            instruction.setText(bundle.getString("dataInstruction"));
         }
     }
 }

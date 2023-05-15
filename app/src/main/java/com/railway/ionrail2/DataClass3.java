@@ -6,6 +6,9 @@ public class DataClass3 {
     private String dataTimeStamp;
     private String dataUsonic;
 
+    public DataClass3() {
+    }
+
 
     public String getDataServodoor() {
         return dataServodoor;
@@ -18,7 +21,6 @@ public class DataClass3 {
     public String getDataUsonic() {
         return dataUsonic;
     }
-    public DataClass3(){
 
-    }
+
 }

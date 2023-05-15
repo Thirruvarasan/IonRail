@@ -20,9 +20,11 @@ import java.util.List;
 
 public class Alert extends AppCompatActivity {
     RecyclerView recyclerView;
-    ValueEventListener eventListener;
+    ArrayList<DataClass3> dataList3;
     DatabaseReference databaseReference;
-    ArrayList<DataClass3> dataList;
+//    ValueEventListener eventListener;
+    MyAdapter3 myAdapter3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,27 +32,31 @@ public class Alert extends AppCompatActivity {
         setContentView(R.layout.activity_alert);
 
         recyclerView = findViewById(R.id.recyclerView3);
-
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(Alert.this,1);
-        recyclerView.setLayoutManager(gridLayoutManager);
-
-        dataList = new ArrayList<>();
-        MyAdapter3 adapter = new MyAdapter3(Alert.this,dataList);
-        recyclerView.setAdapter(adapter);
-
+//
+//        GridLayoutManager gridLayoutManager = new GridLayoutManager(Alert.this,1);
+//        recyclerView.setLayoutManager(gridLayoutManager);
+//
+//        dataList3 = new ArrayList<>();
+//        MyAdapter3 adapter = new MyAdapter3(Alert.this,dataList3);
+//        recyclerView.setAdapter(adapter);
+         recyclerView.setHasFixedSize(true);
+         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         databaseReference = FirebaseDatabase.getInstance().getReference("Traindata");
 
-        eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
+        dataList3 = new ArrayList<>();
+        myAdapter3 = new MyAdapter3(this,dataList3);
+        recyclerView.setAdapter(myAdapter3);
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                dataList.clear();
-                for (DataSnapshot itemSnapshot : snapshot.getChildren()){
-                    DataClass3 dataClass = itemSnapshot.getValue(DataClass3.class);
-                    dataList.add(dataClass);
+                dataList3.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    DataClass3 dataClass = dataSnapshot.getValue(DataClass3.class);
+                    dataList3.add(dataClass);
                 }
-                adapter.notifyDataSetChanged();
+                myAdapter3.notifyDataSetChanged();
             }
-
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
