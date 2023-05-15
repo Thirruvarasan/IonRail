@@ -18,7 +18,17 @@
         android:gravity="center"
         android:textAlignment="center"
         android:textSize="28dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/logonoback"
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -30,14 +40,6 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/logonoback"
-        android:layout_marginTop="-30dp"/>
 
     <TextView
         android:id="@+id/lblName"

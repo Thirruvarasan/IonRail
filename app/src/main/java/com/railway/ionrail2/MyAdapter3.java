@@ -35,11 +35,10 @@ public class MyAdapter3 extends RecyclerView.Adapter<MyViewHolder3> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder3 holder, int position) {
 
-        DataClass3 dataClass3 =dataList3.get(position);
-
-        holder.recServodoor.setText(dataClass3.getDataServodoor());
-        holder.recUsonic.setText(dataClass3.getDataUsonic());
-        holder.recTimestamp.setText(dataClass3.getDataTimeStamp());
+//        DataClass3 dataClass3 = dataList3.get(position);
+        holder.recServodoor1.setText(dataList3.get(position).getDataServodoor());
+        holder.recUsonic1.setText(dataList3.get(position).getDataUsonic());
+        holder.recTimestamp1.setText(dataList3.get(position).getDataTimeStamp());
 
         holder.recCard3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,15 +57,15 @@ public class MyAdapter3 extends RecyclerView.Adapter<MyViewHolder3> {
     }
 }
 class MyViewHolder3 extends RecyclerView.ViewHolder {
-    TextView recServodoor, recUsonic, recTimestamp;
+    TextView recServodoor1, recUsonic1, recTimestamp1;
     CardView recCard3;
 
     public MyViewHolder3(@NonNull View itemView) {
         super(itemView);
 
         recCard3 = itemView.findViewById(R.id.recCard3);
-        recServodoor = itemView.findViewById(R.id.recServodoor);
-        recUsonic = itemView.findViewById(R.id.recUsonic);
-        recTimestamp = itemView.findViewById(R.id.recTimeStamp);
+        recServodoor1 = itemView.findViewById(R.id.recServodoor);
+        recUsonic1 = itemView.findViewById(R.id.recUsonic);
+        recTimestamp1 = itemView.findViewById(R.id.recTimeStamp);
     }
 }

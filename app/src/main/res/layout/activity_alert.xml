@@ -16,10 +16,21 @@
        android:layout_gravity="center"
         android:textAlignment="center"
         android:gravity="center"
+        android:layout_marginTop="10dp"
         android:text="RAILWAY CROSSING SYSTEM"
         android:textColor="@color/black"
         android:textSize="28dp"
         android:textStyle="bold" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/logonoback" />
 
     <TextView
         android:id="@+id/textView2"
@@ -32,14 +43,6 @@
         android:textColor="@color/black"
         android:textSize="28dp"
         android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="-30dp"
-        app:srcCompat="@drawable/logonoback" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView3"

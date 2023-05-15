@@ -50,6 +50,7 @@ public class AdminComplaint extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
             }
 
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 

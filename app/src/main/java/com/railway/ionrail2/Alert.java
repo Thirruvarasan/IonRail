@@ -20,9 +20,9 @@ import java.util.List;
 
 public class Alert extends AppCompatActivity {
     RecyclerView recyclerView;
-    MyAdapter3 MyAdapter3;
-    DatabaseReference database;
-    ArrayList<DataClass3> list3;
+    ValueEventListener eventListener;
+    DatabaseReference databaseReference;
+    ArrayList<DataClass3> dataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,28 +30,33 @@ public class Alert extends AppCompatActivity {
         setContentView(R.layout.activity_alert);
 
         recyclerView = findViewById(R.id.recyclerView3);
-        database = FirebaseDatabase.getInstance().getReference("Traindata");
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        list3 = new ArrayList<>();
-        MyAdapter3 = new MyAdapter3(this, list3);
-        recyclerView.setAdapter(MyAdapter3);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(Alert.this,1);
+        recyclerView.setLayoutManager(gridLayoutManager);
 
-        database.addListenerForSingleValueEvent(new ValueEventListener() {
+        dataList = new ArrayList<>();
+        MyAdapter3 adapter = new MyAdapter3(Alert.this,dataList);
+        recyclerView.setAdapter(adapter);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Traindata");
+
+        eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot snapshot1 : snapshot.getChildren()){
-                    DataClass3 dataClass3 = snapshot1.getValue(DataClass3.class);
-                    list3.add(dataClass3);
+                dataList.clear();
+                for (DataSnapshot itemSnapshot : snapshot.getChildren()){
+                    DataClass3 dataClass = itemSnapshot.getValue(DataClass3.class);
+                    dataList.add(dataClass);
                 }
-                MyAdapter3.notifyDataSetChanged();
+                adapter.notifyDataSetChanged();
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
+
     }
 }

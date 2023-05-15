@@ -40,12 +40,21 @@ public class AlertFromAdmin extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference("Instruction");
 
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                dataList2.clear();
+//                for (DataSnapshot itemSnapshot2 : snapshot.getChildren()){
+//                    DataClass2 dataClass2 = itemSnapshot2.getValue(DataClass2.class);
+//                    dataList2.add(dataClass2);
+//                }
+//                adapter.notifyDataSetChanged();
+//            }
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 dataList2.clear();
-                for (DataSnapshot itemSnapshot3 : snapshot.getChildren()){
-                    DataClass2 dataClass2 = itemSnapshot3.getValue(DataClass2.class);
-                    dataList2.add(dataClass2);
+                for (DataSnapshot itemSnapshot : snapshot.getChildren()){
+                    DataClass2 dataClass = itemSnapshot.getValue(DataClass2.class);
+                    dataList2.add(dataClass);
                 }
                 adapter.notifyDataSetChanged();
             }
